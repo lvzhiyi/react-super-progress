@@ -1,0 +1,101 @@
+@import "../utils/rem/_rem.styl";
+// @import "./flex.styl";
+
+primary-color = #E96858
+dark-color = #2F2929
+
+primary=#E96858
+red = #E96858
+gray-color = alpha(#2F2929, 0.2)
+
+// size(10px, 20px) width 10px; height: 20px;
+// size(10px) => width 10px; height: 10px;
+size(w, h = w)
+    width w
+    height h or w
+
+clearfix(){
+    zoom: 1;
+	&:before {
+		content: " ";
+		display: block;
+	}
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+pull-right()
+	float: right;
+
+pull-left()
+	float: left;
+
+arrow(width=20px, color=#D8D8D8, border-width=2px){
+	display: inline-block;
+	width: (width);
+	height: (width);
+	border: border-width solid color;
+	border-bottom: none;
+	border-left: none;
+	vertical-align: middle;
+	&.up {
+		transform: rotate(-45deg);
+	}
+	&.down {
+		transform: rotate(135deg);
+	}
+	&.right {
+		transform: rotate(45deg);
+	}
+	&.left {
+		transform: rotate(-135deg);
+	}
+}
+
+line-size(size)
+    font-size size
+    line-height size
+
+safe-fix() {
+	padding-bottom: env(safe-area-inset-bottom)!important;
+}
+
+activeBgColor($bgColor = #F3F3F5) {
+    &:active {
+        background-color: $bgColor;
+    }
+}
+
+@media only screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) {
+	safe-fix {
+		safe-fix()
+	}
+}
+
+flex-center(rows=center,cols=center){
+    display: flex;
+	justify-content: rows;
+	align-items: cols;
+}
+
+Font-PF($type = Light){
+	font-family:"PingFangSC-%s" % $type, "Microsoft YaHei", "微软雅黑", serif;
+}
+
+Font-SFC($type = Light){
+	font-family: SFNSDisplay, "PingFangSC-%s" % $type, "Microsoft YaHei", "微软雅黑", serif;
+}
+
+Font-DIN($type = Regular){
+	font-family: "DINAlternate-%s" % $type , "DINCondensed-%s" % $type, "Microsoft YaHei", "微软雅黑";
+}
+iphonex_top(){
+    padding-top: constant(safe-area-inset-top);
+    /* Status bar height on iOS 11+ */
+    padding-top: env(safe-area-inset-top);
+}
+
+

@@ -1,0 +1,144 @@
+
+.Picker-mask{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    overscroll-behavior: contain;
+    overflow: hidden;
+
+    &-transparent{
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    &-animate-fade-in{
+        animation: fadeIn ease .3s forwards;
+    }
+
+    &-animate-fade-out{
+        animation: fadeOut ease .3s forwards;
+    }
+
+    &-animate-slide-up{
+        animation: slideUp ease .3s forwards;
+    }
+
+    &-animate-slide-down{
+        animation: slideDown ease .3s forwards;
+    }
+
+    &-picker{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 5000;
+        backface-visibility: hidden;
+        transform: translate(0, 100%);
+        //slide up animation
+        transition: transform .3s;
+    }
+
+    &-hd{
+        display: flex;
+        padding: 0 23px;
+        background-color: #FAFAFA;
+        position: relative;
+        text-align: center;
+        font-size: 14px;
+        height: 48px;
+        line-height: 48px;
+
+        .Picker-mask-title{
+            font-size: 16px
+        }
+
+        ::after{
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            height: 1px;
+            border-bottom: 1px solid #e5e5e5;
+            color: #e5e5e5;
+            transform-origin: 0 100%;
+            transform: scaleY(.5);
+        }
+    }
+
+    &-bd{
+        display: flex;
+        position: relative;
+        background-color: #fff;
+        height: 200px;
+        overflow: hidden;
+        padding-left: 5px;
+        padding-right: 5px;
+        box-sizing: border-box;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &-action{
+        display: block;
+        flex: 1;
+        color: #3AB078;
+
+        &.left{
+            text-align: left;
+            color: #2F2929;
+        }
+
+        &.right{
+            text-align: right;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 100%, 0);
+    }
+}

@@ -1,0 +1,80 @@
+
+.Picker-column{
+    flex: 1;
+    position: relative;
+    height: 100%;
+    touch-action: none;
+    &-mask{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        top: 0;
+        height: 100%;
+        margin: 0 auto;
+        background: linear-gradient(180deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6)),linear-gradient(0deg,hsla(0,0%,100%,.95),hsla(0,0%,100%,.6));
+        background-position: top,bottom;
+        background-size: 100% 40%;
+        background-repeat: no-repeat;
+        transform: translateZ(0);
+    }
+
+
+
+    &-indicator{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        // top: @indicatorTop;
+
+        &::after, &::before{
+            content: " ";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            color: #e5e5e5;
+        }
+
+        &::after{
+            bottom: 0;
+            border-bottom: 1px solid #e5e5e5;
+            transform-origin: 0 100%;
+            transform: scaleY(.5);
+        }
+
+        &::before{
+            top: 0;
+            border-top: 1px solid #e5e5e5;
+            transform-origin: 0 0;
+            transform: scaleY(.5);
+        }
+    }
+
+    &-content{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+
+
+    &-item{
+        // height: @itemHeight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 18px;
+
+        &.disabled{
+            color: #999;
+        }
+    }
+}

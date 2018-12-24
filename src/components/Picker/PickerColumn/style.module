@@ -1,0 +1,12 @@
+@itemHeight:50px;
+@indicatorTop:80px;
+
+.Picker-column{
+    &-indicator{
+        top: 80px;
+        height: 50px;
+    }
+    &-item{
+        height: 50px;
+    }
+}
