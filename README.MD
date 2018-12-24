@@ -10,7 +10,7 @@ Progress Bar 、rect Bar and pei progress
 [npm-url]: https://www.npmjs.com/package/react-super-progress
 [node-image]: https://img.shields.io/badge/node.js-%3E=_0.10-green.svg?style=flat-square
 [node-url]: http://nodejs.org/download/
-[download-image]: https://www.npmjs.com/package/react-super-progress
+[download-image]: http://img.shields.io/npm/v/rc-progress.svg?style=flat-square
 [download-url]: https://www.npmjs.com/package/react-super-progress
 
 ## Example
