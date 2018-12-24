@@ -28,10 +28,10 @@ https://www.lzyweb.cn/progress-docs/#/elements/components/Progress
 
 ## Screenshots
 
-<img src="https://www.lzyweb.cn/img/p1.jpeg" />
-<img src="https://www.lzyweb.cn/img/p2.jpeg" />
-<img src="https://www.lzyweb.cn/img/p3.jpeg" />
-<img src="https://www.lzyweb.cn/img/p4.jpeg" />
+<img src="http://120.78.184.181/img/p1.jpeg" />
+<img src="http://120.78.184.181/img/p2.jpeg" />
+<img src="http://120.78.184.181/img/p3.jpeg" />
+<img src="http://120.78.184.181/img/p4.jpeg" />
 
 ## Browsers
 
